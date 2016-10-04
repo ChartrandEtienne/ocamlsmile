@@ -1,13 +1,5 @@
 open Printf
 
-let rec accu_smile x y input =
-	if x == 0 then input
-	else if x > y then (
-		accu_smile x (y+1) (input ^ "a")
-	) else (
-		accu_smile (x-1) 0 (input ^ "\n")
-	)
-
 let rec smile x y =
 	if x == 0 then ()
 	else if x > y then (
@@ -19,7 +11,7 @@ let rec smile x y =
 	)
 
 let main () =
-	let smiled = accu_smile 3 0 "" in
+	let smiled = Smodule.smile 3 0 "" in
 	let _  = printf "smiled: \n%s\n" smiled in
 	smile 3 0
 

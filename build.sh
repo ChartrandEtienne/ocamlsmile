@@ -1,2 +1,2 @@
 #!/bin/sh
-ocamlopt -o smile smile.ml
+ocamlopt -o smile smodule.ml smile.ml
